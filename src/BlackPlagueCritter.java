@@ -15,8 +15,10 @@ public class BlackPlagueCritter extends Critter {
       int n = actors.size(); if (n == 0) return;
       int r = (int) (Math.random() * n);
       Actor other = actors.get(r);
-         if(!(other instanceof Rock) && !(other instanceof Critter)) 
+         if(!(other instanceof Rock))
+            other.setColor(Color.RED); 
                 other.removeSelfFromGrid();
+
 }
 
 }
